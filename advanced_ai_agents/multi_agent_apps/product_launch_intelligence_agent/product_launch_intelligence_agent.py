@@ -56,7 +56,7 @@ if openai_key and firecrawl_key:
             IMPORTANT: Conclude your report with a 'Sources:' section, listing all URLs of websites you crawled or searched for this analysis.
         """),
         model=OpenAIChat(id="gpt-4o"),
-        tools=[FirecrawlTools(search=True, crawl=True, poll_interval=10)],
+        tools=[FirecrawlTools(api_key=firecrawl_key, scrape=True, crawl=True)],
         show_tool_calls=True,
         markdown=True,
         exponential_backoff=True,
@@ -78,7 +78,7 @@ if openai_key and firecrawl_key:
             IMPORTANT: Conclude your report with a 'Sources:' section, listing all URLs of websites you crawled or searched for this analysis.
         """),
         model=OpenAIChat(id="gpt-4o"),
-        tools=[FirecrawlTools(search=True, crawl=True, poll_interval=10)],
+        tools=[FirecrawlTools(api_key=firecrawl_key, scrape=True, crawl=True)],
         show_tool_calls=True,
         markdown=True,
         exponential_backoff=True,
@@ -101,7 +101,7 @@ if openai_key and firecrawl_key:
             IMPORTANT: Conclude your report with a 'Sources:' section, listing all URLs of websites you crawled or searched for this analysis.
         """),
         model=OpenAIChat(id="gpt-4o"),
-        tools=[FirecrawlTools(search=True, crawl=True, poll_interval=10)],
+        tools=[FirecrawlTools(api_key=firecrawl_key, scrape=True, crawl=True)],
         show_tool_calls=True,
         markdown=True,
         exponential_backoff=True,
